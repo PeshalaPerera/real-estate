@@ -1,0 +1,148 @@
+/* Variables */
+
+:root {
+    --color-white: #ffffff;
+    --color-primary: #191d2b;
+    --color-secondary: #27ae60;
+    --color-nav-1: #ffffff;
+    --color-content-1: #03045E;
+    --color-content-2: #E42256FF;
+}
+
+.light-mode {
+    --color-white: #ffffff;
+    --color-primary: #ffffff;
+    --color-secondary: #f56692;
+    --color-nav-1: #03045E;
+    --color-content-1: #ffffff;
+    --color-content-2: #E42256FF;
+}
+
+/* Theme switcher */
+
+.sub-content-header {
+    padding-top: 10px;
+}
+
+.theme-btn {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.1s ease-in-out;
+}
+
+.theme-btn i {
+    font-size: 1.4rem;
+    pointer-events: none;
+    color: var(--color-content-2);
+}
+
+/* Navigation menu */
+
+.controls .controls-wrapper {
+    display: flex;
+    gap: 0.5em;
+}
+
+.controls-wrapper .active-btn {
+    /* background-color: var(--color-content-1); */
+    transition: all 0.4s ease-in-out;
+}
+
+/* Global configs */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+body {
+    color: white;
+    background-color:  var(--color-content-1);
+    transition: all 0.4s ease-in-out;
+    font-family: 'Overpass', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+        'Helvetica Neue', sans-serif;
+}
+
+a {
+    color: var(--color-nav-1);
+    font-family: inherit;
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px;
+}
+
+p {
+    word-break: normal;
+    white-space: normal;
+}
+
+/* Layout */
+
+header {
+    display: flex;
+    padding: 20px;
+}
+
+header figure img {
+    width: 100px;
+}
+
+
+/* Footer */
+
+#footer {
+    margin: 1em;
+}
+
+.site-footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.site-footer .copyright-text {
+    margin-top: 1rem;
+}
+
+.site-footer .copyright-text time {
+    color: var(--color-content-1);
+}
+
+.site-footer .contact-icon {
+    display: flex;
+    margin-top: 1rem;
+}
+
+.site-footer .contact-icon a {
+    display: flex;
+    align-items: center;
+    color: var(--color-white);
+    background-color: var(--color-content-2);
+    cursor: pointer;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 40%;
+    margin: 0 0.4rem;
+    transition: all 0.4s ease-in-out;
+}
+
+.site-footer .contact-icon a:hover {
+    background-color: var(--color-content-1);
+}
+
+.site-footer .contact-icon a:hover i {
+    color: var(--color-content-2);
+}
+
+.site-footer .contact-icon a i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+}
