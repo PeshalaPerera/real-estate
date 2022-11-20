@@ -14,32 +14,32 @@
       const currentPage = getCurrentPage();
   
       const homePage = "home.html";
-      const aboutPage = "about.html";
-      const blogsPage = "blogs.html";
-      const educationPage = "education.html";
-      const worksPage = "works.html";
+      const findPage = "find.html";
+      const propertiesPage = "properties.html";
+      const savedPage = "saved.html";
+      const favouritesPage = "favourites.html";
   
       let isHomePageActive = false;
-      let isAboutPageActive = false;
-      let isBlogsPageActive = false;
-      let isEducationPageActive = false;
-      let isWorksPageActive = false;
+      let isFindPageActive = false;
+      let isPropertiesPageActive = false;
+      let isSavedPageActive = false;
+      let isFavouritesPageActive = false;
   
       switch (currentPage) {
         case homePage:
           isHomePageActive = true;
           break;
-        case aboutPage:
-          isAboutPageActive = true;
+        case findPage:
+          isFindPageActive = true;
           break;
-        case blogsPage:
-          isBlogsPageActive = true;
+        case propertiesPage:
+          isPropertiesPageActive = true;
           break;
-        case educationPage:
-          isEducationPageActive = true;
+        case savedPage:
+          isSavedPageActive = true;
           break;
-        case worksPage:
-          isWorksPageActive = true;
+        case favouritesPage:
+          isFavouritesPageActive = true;
           break;
       }
   
@@ -52,28 +52,26 @@
                               <span>Home</span>
                           </div>
                       </a>
-                      <a href="${aboutPage}">
-                          <div class="control ${getStyles(isAboutPageActive)}">
+                      <a href="${findPage}">
+                          <div class="control ${getStyles(isFindPageActive)}">
                               <i class="fas fa-search"></i>
                               <span>Find</span>
                           </div>
                       </a>
-                      <a href="${educationPage}">
-                          <div class="control ${getStyles(
-                            isEducationPageActive
-                          )}">
+                      <a href="${savedPage}">
+                          <div class="control ${getStyles(isSavedPageActive)}">
                               <i class="fas fa-list-alt"></i>
                               <span>Properties</span>
                           </div>
                       </a>
-                      <a href="${worksPage}">
-                          <div class="control ${getStyles(isWorksPageActive)}">
+                      <a href="${favouritesPage}">
+                          <div class="control ${getStyles(isFavouritesPageActive)}">
                               <i class="fas fa-bookmark"></i>
                               <span>Saved</span>
                           </div>
                       </a>
-                      <a href="${blogsPage}">
-                          <div class="control ${getStyles(isBlogsPageActive)}">
+                      <a href="${propertiesPage}">
+                          <div class="control ${getStyles(isPropertiesPageActive)}">
                               <i class="fas fa-heart"></i>
                               <span>Favourites</span>
                           </div>
