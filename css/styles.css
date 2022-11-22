@@ -183,3 +183,90 @@ section {
     padding: 20px;
     color: var(--color-content-3);
 }
+
+section .banner {
+    color: wheat;
+    height: 50px;
+    width: 50px;
+}
+
+.form2 {
+    background-color: #000000;
+    border-radius: 50px;
+    padding: 50px;
+    margin: 20px 0;
+}
+
+.form1 {
+    background-color: #000000;
+    border-radius: 50px;
+    padding: 50px;
+    margin: 20px 0;
+    width: 700px;
+    margin-left: 250px;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+form p {
+    color: #6b6ddf;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.form1-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+.form1-row input[type="text"] {
+    border-radius: 50px;
+    width: 350px;
+    padding: 10px;
+}
+
+.form1-row input[type="submit"] {
+    border-radius: 50px;
+    width: 100px;
+    padding: 10px;
+    background-color: #6b6ddf;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: medium;
+}
+
+.form2-row input[type="text"],
+.form2-row input[type="date"],
+.form2-row input[type="address"],
+.form2-row select{
+    border: 2px solid blue;
+    border-radius: 3px;
+    padding: 5px;
+    font-size: 14px;
+    width: 300px;
+    box-shadow: rgba(229, 255, 0, 0.2) 0px 2px 8px 0px;
+}
+
+.form2-row input[type="text"]:focus:invalid {
+    border: 4px solid red;
+    color: red;
+    outline: none;
+}
+
+.form2-row label {
+    margin-bottom: 15px;
+    color: purple;
+}
+
+.form2-row input[type="submit"]{
+    border: 2px solid blue;
+    border-radius: 3px;
+    padding: 5px;
+    font-size: 14px;
+    width: 300px;
+}
+
+#form-submit {
+    display: flex;
+    justify-content: flex-end;
+}
