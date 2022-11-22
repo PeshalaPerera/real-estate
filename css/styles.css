@@ -7,6 +7,7 @@
     --color-nav-1: #ffffff;
     --color-content-1: #03045E;
     --color-content-2: #E42256FF;
+    --color-content-3: rgb(255, 255, 255);
 }
 
 .light-mode {
@@ -16,6 +17,7 @@
     --color-nav-1: #03045E;
     --color-content-1: #ffffff;
     --color-content-2: #E42256FF;
+    --color-content-3: rgb(0, 0, 0);
 }
 
 /* Theme switcher */
@@ -43,10 +45,18 @@
 .controls .controls-wrapper {
     display: flex;
     gap: 0.5em;
+    font-weight: bold;
 }
 
 .controls-wrapper .active-btn {
-    /* background-color: var(--color-content-1); */
+    font-weight: bold;
+    color: var(--color-content-2);
+    transition: all 0.4s ease-in-out;
+}
+
+.footer-controls .active-btn {
+    font-weight: bold;
+    color: var(--color-content-2);
     transition: all 0.4s ease-in-out;
 }
 
@@ -85,6 +95,7 @@ p {
 header {
     display: flex;
     padding: 20px;
+    justify-content: space-between;
 }
 
 header figure img {
@@ -110,7 +121,7 @@ header figure img {
 }
 
 .site-footer .copyright-text time {
-    color: var(--color-content-1);
+    color: var( --color-white);
 }
 
 .site-footer .contact-icon {
@@ -145,4 +156,30 @@ header figure img {
     align-items: center;
     justify-content: center;
     font-size: 1.3rem;
+}
+
+/* back to top icon */
+.site-footer .back-to-top-icon {
+    background-color: var(--color-content-2);
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: 40%;
+    margin: 0 0.4rem;
+    transition: all 0.4s ease-in-out;
+}
+
+.site-footer .back-to-top-icon a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.site-footer .footer-controls ul li a {
+    padding: 5px;
+}
+
+section {
+    padding: 20px;
+    color: var(--color-content-3);
 }
