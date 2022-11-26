@@ -16,14 +16,30 @@
     />
   </head>
   <body>
-    <header>
-      <!--LOGO -->
-      <figure>
-        <img src="img/logo.jpg" alt="logo" />
-      </figure>
-      <!--NAVIGATION BAR -->
-      <div id="navigation"></div>
-    </header>
+      <div id="header-hero-container">
+        <header>
+          <div class="flex container">
+            <a id="logo" href="#">Viktoria Estate</a>
+            <nav>
+                <button id="nav-toggle" class="hamburger-menu" title="menue">
+                    <span class="strip"></span>
+                    <span class="strip"></span>
+                    <span class="strip"></span>
+                </button>
+  
+                <ul id="nav-menu">
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="http://www.google.com" target="_blank">Properties</a></li>
+                    <li><a href="#">Agents</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">News</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li id="close-flyout"><span class="fas fa-times"></span></li>
+                </ul>
+            </nav>
+          </div>
+        </header>
+      </div>
     <!-- <a id="top"></a> -->
     <section class="banner">     
       <form class="form1" action="find.html" method="post">
