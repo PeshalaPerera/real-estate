@@ -16,13 +16,13 @@
     const homePage = "home.html";
     const findPage = "find.html";
     const propertiesPage = "properties.html";
-    const savedPage = "saved.html";
+    const galleryPage = "gallery.html";
     const favouritesPage = "favourites.html";
 
     let isHomePageActive = false;
     let isFindPageActive = false;
     let isPropertiesPageActive = false;
-    let isSavedPageActive = false;
+    let isGalleryPageActive = false;
     let isFavouritesPageActive = false;
 
     switch (currentPage) {
@@ -35,8 +35,8 @@
       case propertiesPage:
         isPropertiesPageActive = true;
         break;
-      case savedPage:
-        isSavedPageActive = true;
+      case galleryPage:
+        isGalleryPageActive = true;
         break;
       case favouritesPage:
         isFavouritesPageActive = true;
@@ -71,14 +71,14 @@
                         <a href="${propertiesPage}">Properties</a>
                       </li>
                       <li>
-                        <a href="${savedPage}">Saved</a>
+                        <a href="${galleryPage}">Gallery</a>
                       </li>
                       <li>
                         <a href="${favouritesPage}">Favourites</a>
                       </li>
                     </ul>
                   </nav>
-                  
+
                 </div>
               </header>
             </div>
