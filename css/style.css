@@ -79,7 +79,7 @@ h1 {
 
 h2 {
   font-size: 2.5rem;
-  color: #2eca6a;
+  color: var(--color-content-5);
   margin-bottom: 1rem;
   line-height: 1.2;
 }
@@ -104,9 +104,9 @@ p {
 }
 
 button.rounded {
-  background: #2eca6a;
+  background: var(--color-content-5);
   border: none;
-  color: #fff;
+  color: var(--color-content-2);
   font-size: 16px;
   border-radius: 30px;
   padding: 10px 30px;
@@ -189,7 +189,7 @@ header ul li a {
 }
 
 header ul.is-sticky li a {
-  color: #000;
+  color: var(--color-content-2);
 }
 
 header ul li a:hover,
@@ -199,7 +199,7 @@ header ul li a.active {
 
 header ul.is-sticky li a:hover,
 header ul.is-sticky li a.active {
-  color: #2eca6a;
+  color: var(--color-content-3);
 }
 
 /* end: header styles */
