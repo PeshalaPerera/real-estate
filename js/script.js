@@ -47,11 +47,9 @@
             <div id="header-hero-container">
               <header>
                 <div class="flex container">
-                  <figure>
-                    <img src="" alt="logo" />
-                  </figure>
+                  <img src="img/logo.png" id="logo" alt="logo" />
 
-                  <a id="logo" href="#">Viktoria Estate</a>
+                  <a id="logo-text" href="#">Viktoria Estate</a>
                   <nav>
                     <button id="nav-toggle" class="hamburger-menu">
                       <span class="strip"></span>
@@ -60,15 +58,21 @@
                     </button>
 
                     <ul id="nav-menu">
-                      <li><a href="#" class="active">Home</a></li>
                       <li>
-                        <a href="http://www.google.com" target="_blank">Properties</a>
+                        <a href="${homePage}">Home</a>
+                      </li>                     
+                      <li>
+                        <a href="${findPage}">Find</a>
                       </li>
-                      <li><a href="#">Home</a></li>
-                      <li><a href="#">Find</a></li>
-                      <li><a href="#">Properties</a></li>
-                      <li><a href="#">Saved</a></li>
-                      <li><a href="#">Favourites</a></li>
+                      <li>
+                        <a href="${propertiesPage}">Properties</a>
+                      </li>
+                      <li>
+                        <a href="${savedPage}">Saved</a>
+                      </li>
+                      <li>
+                        <a href="${favouritesPage}">Favourites</a>
+                      </li>
                     </ul>
                   </nav>
                 </div>

@@ -4,9 +4,9 @@
 :root {
   --color-content-1: #BA94D1;
   --color-content-2: rgb(255, 255, 255);
-  --color-content-3: #282A3A;
-  --color-content-4: #12de4c;
-  --color-content-5: #3B3486;
+  /* --color-content-3: #282A3A; */
+  --color-content-3: #249716;
+  --color-content-5: #3A8891;
   --color-content-6: #702f59;
   --color-content-7: #B01E68;
 }
@@ -14,9 +14,9 @@
 .light-mode {
   --color-content-1: #ffffff;
   --color-content-2: rgb(0, 0, 0);
-  --color-content-3: #CF0A0A;
-  --color-content-4: #12de4c;
-  --color-content-5: #3B3486;
+  /* --color-content-3: #CF0A0A; */
+  --color-content-3: #249716;
+  --color-content-5: #3A8891;
   --color-content-6: #702f59;
   --color-content-7: #B01E68;
 }
@@ -52,6 +52,7 @@ body {
 .flex {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 h1,
@@ -121,7 +122,6 @@ p.large-paragraph {
 /* start: header styles */
 #header-hero-container {
   min-height: 100px;
-  /* height: calc(100vh); */
   position: relative;
 }
 
@@ -134,7 +134,7 @@ header {
   z-index: 3;
 }
 
-#logo {
+#logo-text {
   font-family: inherit;
   font-size: 1.7rem;
   font-weight: 800;
@@ -142,6 +142,10 @@ header {
   text-decoration: none;
   position: relative;
   top: 4px;
+}
+
+#logo {
+  width: 150px;
 }
 
 .hamburger-menu {
@@ -271,7 +275,7 @@ header ul.is-sticky li a.active {
 }
 
 #search-content .search-box-submit button {
-  background-color:var(--color-content-5);
+  background-color: var(--color-content-5);
   color: var(--color-content-2);
   font-weight: bolder;
   width: 150px;
