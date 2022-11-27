@@ -4,7 +4,6 @@
 :root {
   --color-content-1: #BA94D1;
   --color-content-2: rgb(255, 255, 255);
-  /* --color-content-3: #282A3A; */
   --color-content-3: #249716;
   --color-content-5: #3A8891;
   --color-content-6: #702f59;
@@ -14,13 +13,11 @@
 .light-mode {
   --color-content-1: #ffffff;
   --color-content-2: rgb(0, 0, 0);
-  /* --color-content-3: #CF0A0A; */
   --color-content-3: #249716;
   --color-content-5: #3A8891;
   --color-content-6: #702f59;
   --color-content-7: #B01E68;
 }
-
 /* end: Variables */
 
 /* start: global styles */
@@ -118,7 +115,6 @@ p.large-paragraph {
   font-size: 1.25rem;
   font-weight: 300;
 }
-
 /* end: global styles */
 
 /* start: header styles */
@@ -201,8 +197,9 @@ header ul.is-sticky li a:hover,
 header ul.is-sticky li a.active {
   color: var(--color-content-3);
 }
-
 /* end: header styles */
+
+/* start: footer styles */
 
 /* end: footer styles */
 
@@ -257,7 +254,6 @@ header ul.is-sticky li a.active {
 .search-box .search-box-submit button {
   border: 0;
   border-radius: 10px;
-  /* box-shadow: 0 0 15px 4px rgb(191 79 205 / 82%); */
   margin-left: 25px;
   height: 50px;
   font-size: large;
@@ -281,7 +277,6 @@ header ul.is-sticky li a.active {
   font-weight: bolder;
   width: 150px;
 }
-
 /* end: search content styles */
 
 /* start: properties content styles */
@@ -342,7 +337,6 @@ header ul.is-sticky li a.active {
   display: flex;
   margin-left: 25px;
 }
-
 /* end: properties content styles */
 
 /* start: media queries */
@@ -591,7 +585,6 @@ header ul.is-sticky li a.active {
     width: 200px;
   }
 }
-
 /* end: media queries */
 
 
