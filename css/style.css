@@ -20,13 +20,14 @@
   --color-content-6: #702f59;
   --color-content-7: #B01E68;
 }
+
 /* end: Variables */
 
 /* start: global styles */
 body {
   background-color: var(--color-content-1);
   font-family: 'Overpass', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
-        'Helvetica Neue', sans-serif;
+    'Helvetica Neue', sans-serif;
   margin: 0;
   padding: 0;
   font-size: 1rem;
@@ -117,6 +118,7 @@ p.large-paragraph {
   font-size: 1.25rem;
   font-weight: 300;
 }
+
 /* end: global styles */
 
 /* start: header styles */
@@ -132,6 +134,7 @@ header {
   position: fixed;
   width: 100%;
   z-index: 3;
+  height: 55px;
 }
 
 #logo-text {
@@ -198,7 +201,10 @@ header ul.is-sticky li a:hover,
 header ul.is-sticky li a.active {
   color: #2eca6a;
 }
+
 /* end: header styles */
+
+/* end: footer styles */
 
 /* start: Scroll bar */
 /* ::-webkit-scrollbar {
@@ -223,7 +229,6 @@ header ul.is-sticky li a.active {
 #search-content {
   background-color: #fff;
   position: relative;
-  /* border-radius: 100px; */
   margin: 0px 50px 0px 50px;
 }
 
@@ -234,31 +239,25 @@ header ul.is-sticky li a.active {
   width: 1250px;
 }
 
-#search-content .search-box {
+.search-box {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
-}
-
-#search-content .search-box {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: flex;
-  background-color: #7d7e877a;
-  /* border-radius: 40px; */
   padding: 50px 25px 50px 25px;
 }
 
-#search-content .search-box .search-box-element input,
-#search-content .search-box .search-box-element select, 
-#search-content .search-box .search-box-submit button {
+.banner {
+  background-color: #7d7e877a;
+}
+
+.search-box .search-box-element input,
+.search-box .search-box-element select,
+.search-box .search-box-submit button {
   border: 0;
   border-radius: 10px;
-  box-shadow: 0 0 15px 4px rgb(191 79 205 / 82%);
+  /* box-shadow: 0 0 15px 4px rgb(191 79 205 / 82%); */
   margin-left: 25px;
   height: 50px;
   font-size: large;
@@ -267,19 +266,22 @@ header ul.is-sticky li a.active {
 
 #search-category {
   width: 500px;
+  box-shadow: 0 0 15px 4px rgb(191 79 205 / 82%);
 }
 
-#property-type, 
+#property-type,
 #location {
   width: 150px;
+  box-shadow: 0 0 15px 4px rgb(191 79 205 / 82%);
 }
 
-#search-content .search-box-submit button {
+.search-box-submit button {
   background-color: var(--color-content-5);
   color: var(--color-content-2);
   font-weight: bolder;
   width: 150px;
 }
+
 /* end: search content styles */
 
 /* start: properties content styles */
@@ -340,6 +342,7 @@ header ul.is-sticky li a.active {
   display: flex;
   margin-left: 25px;
 }
+
 /* end: properties content styles */
 
 /* start: media queries */
@@ -385,6 +388,7 @@ header ul.is-sticky li a.active {
   nav ul li:first-child {
     margin-top: 50px;
   }
+
   nav ul li a {
     font-size: 20px;
     color: #212529;
@@ -429,11 +433,11 @@ header ul.is-sticky li a.active {
     width: 49%;
   }
 
-  #the-best .flex > img {
+  #the-best .flex>img {
     display: none;
   }
 
-  #the-best .flex > div {
+  #the-best .flex>div {
     width: 100%;
   }
 
@@ -454,7 +458,7 @@ header ul.is-sticky li a.active {
     width: 300px;
   }
 
-  #services .flex > div {
+  #services .flex>div {
     width: 48%;
   }
 
@@ -480,12 +484,12 @@ header ul.is-sticky li a.active {
     flex-wrap: wrap;
   }
 
-  footer .flex > div {
+  footer .flex>div {
     width: 100%;
     margin-top: 1rem;
   }
 
-  footer .flex > div:first-child {
+  footer .flex>div:first-child {
     margin-top: 0;
   }
 
@@ -525,7 +529,7 @@ header ul.is-sticky li a.active {
     display: block;
   }
 
-  #how-it-works .flex > div {
+  #how-it-works .flex>div {
     width: 100%;
     margin-top: 2rem;
   }
@@ -539,7 +543,7 @@ header ul.is-sticky li a.active {
     margin: 4rem 0;
   }
 
-  #services .flex > div {
+  #services .flex>div {
     width: 100%;
   }
 
@@ -587,4 +591,47 @@ header ul.is-sticky li a.active {
     width: 200px;
   }
 }
+
 /* end: media queries */
+
+
+@media (max-width:1000px) {
+  .wrapper {
+    width: 100%;
+  }
+
+  .footer {
+    height: 30%;
+    padding-top: 19%;
+  }
+
+  .footer p {
+    width: 90%;
+  }
+}
+
+@media (max-width:600px) {
+  .footer {
+    height: 40%;
+    padding-top: 45%;
+    padding-bottom: 0;
+  }
+
+  .footer p {
+    width: 90%;
+    line-height: 1.4;
+    font-size: 10px;
+  }
+
+  .footer span {
+    width: 35px;
+    height: 35px;
+    margin: 0 5px;
+  }
+
+  .social span i {
+    font-size: 18px;
+    line-height: 36px;
+  }
+
+}

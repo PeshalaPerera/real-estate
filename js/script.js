@@ -47,9 +47,12 @@
             <div id="header-hero-container">
               <header>
                 <div class="flex container">
-                  <img src="img/logo.png" id="logo" alt="logo" />
+                  <a href="${homePage}">
+                    <img src="img/logo.png" id="logo" alt="logo" />
+                  </a>
 
-                  <a id="logo-text" href="#">Viktoria Estate</a>
+                  <a id="logo-text" href="${homePage}">Dream Home</a>
+
                   <nav>
                     <button id="nav-toggle" class="hamburger-menu">
                       <span class="strip"></span>
@@ -75,6 +78,7 @@
                       </li>
                     </ul>
                   </nav>
+                  
                 </div>
               </header>
             </div>
