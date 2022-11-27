@@ -2,10 +2,13 @@
 
 /* start: Variables */
 :root {
-  --color-content-1: #000000;
+  --color-content-1: #BA94D1;
   --color-content-2: rgb(255, 255, 255);
-  --color-content-3: #CF0A0A;
+  --color-content-3: #282A3A;
   --color-content-4: #12de4c;
+  --color-content-5: #3B3486;
+  --color-content-6: #702f59;
+  --color-content-7: #B01E68;
 }
 
 .light-mode {
@@ -13,13 +16,17 @@
   --color-content-2: rgb(0, 0, 0);
   --color-content-3: #CF0A0A;
   --color-content-4: #12de4c;
+  --color-content-5: #3B3486;
+  --color-content-6: #702f59;
+  --color-content-7: #B01E68;
 }
 /* end: Variables */
 
 /* start: global styles */
 body {
   background-color: var(--color-content-1);
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Overpass', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+        'Helvetica Neue', sans-serif;
   margin: 0;
   padding: 0;
   font-size: 1rem;
@@ -58,7 +65,7 @@ h5 {
 
 h1,
 h2 {
-  font-family: "Playfair Display", serif;
+  font-family: inherit;
   font-weight: 800;
 }
 
@@ -87,7 +94,7 @@ h4 {
 
 h5 {
   font-size: 1rem;
-  font-family: "Playfair Display", serif;
+  font-family: inherit;
 }
 
 p {
@@ -128,7 +135,7 @@ header {
 }
 
 #logo {
-  font-family: "Montserrat", sans-serif;
+  font-family: inherit;
   font-size: 1.7rem;
   font-weight: 800;
   color: var(--color-content-3);
@@ -189,6 +196,25 @@ header ul.is-sticky li a.active {
 }
 /* end: header styles */
 
+/* start: Scroll bar */
+/* ::-webkit-scrollbar {
+  width: 0.5em;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-content-1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-grey-2);
+  border-radius: 1em;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-grey-4);
+} */
+/* end: Scroll bar */
+
 /* start: search content styles */
 #search-content {
   background-color: #fff;
@@ -201,8 +227,7 @@ header ul.is-sticky li a.active {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 600px;
-  height: 200px;
+  width: 1250px;
 }
 
 #search-content .search-box {
@@ -219,35 +244,48 @@ header ul.is-sticky li a.active {
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
-  background-color: var(--color-content-3);
+  background-color: #7d7e877a;
   /* border-radius: 40px; */
-  padding: 25px 25px 25px 25px;
+  padding: 50px 25px 50px 25px;
 }
 
 #search-content .search-box .search-box-element input,
 #search-content .search-box .search-box-element select, 
 #search-content .search-box .search-box-submit button {
   border: 0;
-  padding: 10px;
   border-radius: 10px;
-  box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
-  /* margin: 2px, 2px, 2px, 2px; */
+  box-shadow: 0 0 15px 4px rgb(191 79 205 / 82%);
+  margin-left: 25px;
+  height: 50px;
+  font-size: large;
+  text-align: center;
+}
+
+#search-category {
+  width: 500px;
+}
+
+#property-type, 
+#location {
+  width: 150px;
 }
 
 #search-content .search-box-submit button {
-  background-color: var(--color-content-4);
+  background-color:var(--color-content-5);
   color: var(--color-content-2);
   font-weight: bolder;
+  width: 150px;
 }
 /* end: search content styles */
 
 /* start: properties content styles */
 #properties-content {
   padding: 1rem 0 5rem;
+  padding-top: 50px;
 }
 
 #properties-content .properties-card {
-  width: 240px;
+  /* width: 240px; */
   padding: .5rem, .5rem, 1.5rem;
   border-radius: 1rem;
   margin: 0 auto;
@@ -257,7 +295,8 @@ header ul.is-sticky li a.active {
 #properties-content img {
   border-radius: 1rem;
   margin-bottom: 1rem;
-  max-width: 240px;
+  /* max-width: 240px; */
+  max-height: 200px;
 }
 
 .properties-data {
@@ -265,24 +304,37 @@ header ul.is-sticky li a.active {
 }
 
 .properties-price {
-  /* color: #12de4c; */
+  color: var(--color-content-3);
   margin-bottom: .25rem;
+  font-size: 30px;
 }
 
 .properties-price span {
-  color: yellow;
+  color: var(--color-content-6);
+  font-size: 25px;
 }
 
 .properties-title {
   margin-bottom: .75rem;
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--color-content-7);
 }
 
 .properties-description {
   font-size: small;
+  font-size: 22px;
+  font-weight: bold;
+  color: var(--color-content-5);
 }
 
 .properties-card:hover {
   box-shadow: 0, 12px, 16px, hsla(288, 66%, 45%, .1);
+}
+
+.flex-direction {
+  display: flex;
+  margin-left: 25px;
 }
 /* end: properties content styles */
 

@@ -1,5 +1,5 @@
 (function () {
-  function getNavigationHTML() {
+  function getHeaderHTML() {
     function getCurrentPage() {
       const path = window.location.pathname;
       const page = path.split("/").pop();
@@ -44,45 +44,36 @@
     }
 
     return `
-            <nav class="controls">
-                <div class="controls-wrapper">
-                    <a href="${homePage}">
-                        <div class="control ${getStyles(isHomePageActive)}">
-                            <i class="fas fa-home fa-lg"></i>
-                            <span>Home</span>
-                        </div>                          
-                    </a>                      
-                    <a href="${findPage}">
-                        <div class="control ${getStyles(isFindPageActive)}">
-                            <i class="fas fa-search fa-lg"></i>
-                            <span>Find</span>
-                        </div>
-                    </a>
-                    <a href="${propertiesPage}">
-                        <div class="control ${getStyles(isPropertiesPageActive)}">
-                            <i class="fas fa-list-alt fa-lg"></i>
-                            <span>Properties</span>
-                        </div>
-                    </a>
-                    <a href="${savedPage}">
-                        <div class="control ${getStyles(isSavedPageActive)}">
-                            <i class="fas fa-bookmark fa-lg"></i>
-                            <span>Saved</span>
-                        </div>
-                    </a>
-                    <a href="${favouritesPage}">
-                        <div class="control ${getStyles(isFavouritesPageActive)}">
-                            <i class="fas fa-heart fa-lg"></i>
-                            <span>Favourites</span>
-                        </div>
-                    </a>
-                    <div class="sub-content-header">
-                        <div class="theme-btn">
-                            <i id="theme-icon" class="fas fa-sun fa-lg"></i>
-                        </div>
-                    </div>
+            <div id="header-hero-container">
+              <header>
+                <div class="flex container">
+                  <figure>
+                    <img src="" alt="logo" />
+                  </figure>
+
+                  <a id="logo" href="#">Viktoria Estate</a>
+                  <nav>
+                    <button id="nav-toggle" class="hamburger-menu">
+                      <span class="strip"></span>
+                      <span class="strip"></span>
+                      <span class="strip"></span>
+                    </button>
+
+                    <ul id="nav-menu">
+                      <li><a href="#" class="active">Home</a></li>
+                      <li>
+                        <a href="http://www.google.com" target="_blank">Properties</a>
+                      </li>
+                      <li><a href="#">Home</a></li>
+                      <li><a href="#">Find</a></li>
+                      <li><a href="#">Properties</a></li>
+                      <li><a href="#">Saved</a></li>
+                      <li><a href="#">Favourites</a></li>
+                    </ul>
+                  </nav>
                 </div>
-            </nav>
+              </header>
+            </div>
         `;
   }
 
@@ -204,8 +195,8 @@
   }
 
   try {
-    document.getElementById("navigation").innerHTML = getNavigationHTML();
-    document.getElementById("footer").innerHTML = getFooterHTML();
+    document.getElementById("header").innerHTML = getHeaderHTML();
+    // document.getElementById("footer").innerHTML = getFooterHTML();
   } catch (error) {}
 
   [...document.querySelectorAll(".control")].forEach((button) => {
