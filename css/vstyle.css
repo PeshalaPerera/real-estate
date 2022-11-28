@@ -1,0 +1,80 @@
+/* (slider) */
+.properties-content{
+    height: 250px;
+    margin: auto;
+    position: relative;
+    width: 90%;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+}
+
+/* (slide-tracker) */
+.flex-direction{
+    display: flex;
+    width: calc(250px*6);
+    animation: scroll 40s linear infinite;
+}
+
+.flex-direction:hover{
+    animation-play-state: paused;
+}
+
+@keyframes scroll {
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(calc(-250px*6));
+    }
+}
+
+/* @keyframes scroll {
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(calc(-250px*6));
+    }
+} */
+
+/* (slide) */
+.properties-card{
+    height: 200px;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    perspective: 100px;
+}
+
+img{
+    width: 100%;
+    transition: transform 1s;
+}
+
+img:hover{
+    transform: translateZ(20px);
+}
+
+.properties-content::after,
+.properties-content::before{
+    background: linear-gradient(to right, rgba(255,255,255,1)0%,
+    rgba(255, 255, 255, 0)100%);
+    content: '';
+    height: 100%;
+    position: absolute;
+    width: 15%;
+    z-index: 2;
+}
+
+.properties-content::before{
+    left: 0;
+    top: 0;
+}
+
+.properties-content::after{
+    right: 0;
+    left: 0;
+    transform: rotateZ('180deg')
+}
