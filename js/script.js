@@ -92,23 +92,18 @@
       console.log(`Current page: ${page}`);
       return page;
     }
-    
-    function getStyles(isActive) {
-      return isActive ? "active-btn" : "";
-    }
+    const currentPage = getCurrentPage();
 
     const homePage = "home.html";
     const findPage = "find.html";
     const propertiesPage = "properties.html";
-    const savedPage = "saved.html";
+    const galleryPage = "gallery.html";
     const favouritesPage = "favourites.html";
-
-    const currentPage = getCurrentPage();
 
     let isHomePageActive = false;
     let isFindPageActive = false;
     let isPropertiesPageActive = false;
-    let isSavedPageActive = false;
+    let isGalleryPageActive = false;
     let isFavouritesPageActive = false;
 
     switch (currentPage) {
@@ -121,8 +116,8 @@
       case propertiesPage:
         isPropertiesPageActive = true;
         break;
-      case savedPage:
-        isSavedPageActive = true;
+      case galleryPage:
+        isGalleryPageActive = true;
         break;
       case favouritesPage:
         isFavouritesPageActive = true;
@@ -132,71 +127,65 @@
     return `<footer>
         <hr />
         <div class="site-footer">
-            <div class="copyright-text">
-                <p>Copyright &copy; <time datetime="2022">2022</time></p>
-            </div>
-            <div class="footer-controls">
-              <ul>
-                <li>
-                  <a href="${homePage}">
-                    <div class="footer-control ${getStyles(isHomePageActive)}">
-                      <i class="fas fa-home fa-sm"></i>
-                      <span>Home</span>
-                    </div>
-                  </a>                  
-                </li>
-                <li>
-                  <a href="${findPage}">
-                    <div class="footer-control ${getStyles(isFindPageActive)}">
-                      <i class="fas fa-search fa-sm"></i>
-                      <span>Find</span>
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <a href="${propertiesPage}">
-                    <div class="footer-control ${getStyles(isPropertiesPageActive)}">
-                      <i class="fas fa-list-alt fa-sm"></i>
-                      <span>Properties</span>
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <a href="${savedPage}">
-                    <div class="footer-control ${getStyles(isSavedPageActive)}">
-                      <i class="fas fa-bookmark fa-sm"></i>
-                      <span>Saved</span>
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <a href="${favouritesPage}">
-                    <div class="footer-control ${getStyles(isFavouritesPageActive)}">
-                      <i class="fas fa-heart fa-sm"></i>
-                      <span>Favourites</span>
-                    </div>
-                  </a>
-                </li>
-              </ul>                
-            </div>
-            <div class="contact-icon">
-                <a href="https://www.facebook.com/" target="_blank">
+            <div class="site-footer-contact">
+                <p class="footer-title">Get In Touch</p>
+                <div class="footer-contact-icons">
+                  <div class="icon">
+                    <i class="fa fa-map-marker"></i>
+                    <span>Smith Ave, UK</span>
+                  </div>
+                  <div class="icon">
+                    <i class="fa fa-phone"></i>
+                    <span>07522670617</span>
+                  </div>
+                  <div class="icon">
+                    <i class="fa fa-envelope"></i>
+                    <span>dreamhome@gmail.com</span>
+                  </div>
+                </div>
+                <div class="footer-contact-media">
+                  <a href="https://www.facebook.com/" target="_blank">
                     <i class="fab fa-facebook-f"></i>
-                </a>
-                <a href="https://twitter.com/" target="_blank">
-                    <i class="fab fa-twitter"></i>
-                </a>
-                <a href="https://www.instagram.com/" target="_blank">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="https://www.youtube.com/" target="_blank">
-                    <i class="fab fa-youtube"></i>
-                </a>
+                  </a>
+                  <a href="https://twitter.com/" target="_blank">
+                      <i class="fab fa-twitter"></i>
+                  </a>
+                  <a href="https://www.instagram.com/" target="_blank">
+                      <i class="fab fa-instagram"></i>
+                  </a>
+                  <a href="https://www.youtube.com/" target="_blank">
+                      <i class="fab fa-youtube"></i>
+                  </a>
+                </div>
             </div>
-            <div class="back-to-top-icon">
-                <a href="#top">
-                <i class="fa fa-arrow-up"></i>
-                </a>
+            <div class="site-footer-links">
+              <p class="footer-title">Quick Links</p>
+              <ul class="footer-links-items">
+                <li class="item">
+                  <a href="${homePage}">Home</a>
+                </li>                     
+                <li class="item">
+                  <a href="${findPage}">Find</a>
+                </li>
+                <li class="item">
+                  <a href="${propertiesPage}">Properties</a>
+                </li>
+                <li class="item">
+                  <a href="${galleryPage}">Gallery</a>
+                </li>
+                <li class="item">
+                  <a href="${favouritesPage}">Favourites</a>
+                </li>
+              </ul>               
+            </div>
+            <div class="site-footer-gallery">
+              <p class="footer-title">Photo Gallery</p>
+              <div>
+              </div>       
+            </div>
+            <div class="site-footer-newsletter">
+              <p class="footer-title">Photo Gallery</p>
+              <div></div>
             </div>
         </div>     
     </footer>`;
@@ -204,7 +193,7 @@
 
   try {
     document.getElementById("header").innerHTML = getHeaderHTML();
-    // document.getElementById("footer").innerHTML = getFooterHTML();
+    document.getElementById("footer").innerHTML = getFooterHTML();
   } catch (error) {}
 
   [...document.querySelectorAll(".control")].forEach((button) => {
